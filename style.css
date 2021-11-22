@@ -94,6 +94,20 @@ nav{
 .navigation-ul li a:hover {
     border-bottom: 2px solid var(--dark-color);
 }
+.drop-down{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 15%;
+    background: var(--gray-color);
+    padding: 20px;
+    display: none;
+    transition: 0.3s;
+}
+.navigation-ul li:hover .drop-down{
+    display: block;
+    top: 47px;
+}
 
 
 
@@ -109,7 +123,8 @@ nav{
     padding: 0 10px;
 }
 #search{
-    padding: 0px 0px 0 12px;
+    background: #00ccff;
+    padding: 10px 8px;
 }
 .icons li i{
     color: var(--dark-color);
@@ -121,11 +136,11 @@ nav{
 
 .input-search{
     border: 1px solid var(--gray-color);
-    outline: 0;
-    width: 80%;
+    width: 60%;
     padding: 5px;
     opacity: 0.7;
     transition: 0.3s;
+    background: transparent;
 }
 #bars{ display: none;}
 #bars i{color: var(--main-color); font-size: 22px; transition: 0.3s;}
@@ -138,48 +153,55 @@ nav{
 
         /* main */
 
-        .slide-1 {
-            background: linear-gradient(90deg, rgba(210, 195, 240, 0.2), rgba(19, 91, 158, 0.1)), url(slider1.jpg);
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 550px;
-            position: relative;
+.slide-1 {
+    background: linear-gradient(90deg, rgba(210, 195, 240, 0.2), rgba(19, 91, 158, 0.1)), url(slider1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    position: relative;
         }
 
-        .slide-2 {
-            background: linear-gradient(90deg, rgba(210, 195, 240, 0.2), rgba(19, 91, 158, 0.1)), url(slider2.jpg);
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 550px;
-            position: relative;
+.slide-2 {
+    background: linear-gradient(90deg, rgba(210, 195, 240, 0.2), rgba(19, 91, 158, 0.1)), url(slider2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    position: relative;
         }
 
-        .slide-caption-1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            text-align: center;
-        }
+.slide-caption-1 {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    top: 50%;
+}
 
-        .slide-caption-1 p {
-            font-size: 1rem;
-        }
+.slide-caption-1 p {
+    font-size: 1rem;
+}
 
-        .main-slider .owl-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
+.main-slider .owl-dots {
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+/* best-seller */
+
+.best-seller, .three-cards{
+    margin: 20px 0;
+}
 
 /* cardss */
 .card{
-    padding: 10px 5px;
+    padding:5px;
     margin: 10px 0;
+    overflow: hidden;
+
 }
 .card-2 img{width: 100%;}
 
@@ -218,7 +240,7 @@ nav{
         transform: translateY(-150%);
         background: var(--main-color);
         padding: 20px;
-        transition: 0.5s;
+        transition: 0.3s;
     }
     .navigation-ul.active-nav{
         transform: translateY(0%);
@@ -226,5 +248,28 @@ nav{
     .navigation-ul li{display: block; padding-top: 20px;}
     .navigation-ul li a{color: var(--light-color);}
     #bars {display: block;} 
+    .icons li{
+        padding: 0 5px;
+    }
+    .drop-down{
+        position: relative;
+        margin: 10px 0;
+        width: 70%;
+    }
+    .navigation-ul li:hover .drop-down{
+        left:50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .card-2 img{width: 50%;}
 }
-
+@media(max-width:480px){
+    /* header responsive */
+    .logo-brand img{
+        width: 60px;
+        height: 40px;
+    }
+    .navigation-ul{
+        top: 70px;
+    }
+}
