@@ -261,7 +261,6 @@ nav{
         transform: translateX(-50%);
         top: 0;
     }
-    .card-2 img{width: 50%;}
 }
 @media(max-width:480px){
     /* header responsive */
